@@ -48,18 +48,16 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 
 ---
 
-## Run Web Test
+### Run Web Test
 ```bash
 .\gradlew runWeb
 ```
----
 
-## Run API Test
+### Run API Test
 ```bash
 .\gradlew runApi
 ```
----
-## Run All Test
+### Run All Test
 
 ```bash
 .\gradlew test
@@ -71,12 +69,15 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 - HTML Report
 - JSON Report
 
-**Report disimpan pada folder:**
+#### Report disimpan pada folder:
 <img width="186" height="120" alt="report final" src="https://github.com/user-attachments/assets/4f296a4f-fd6e-4c50-94c3-0962ef81dd1e" />
 
 ---
 
 ## GitHub Actions
-Workflow dijalankan dengan:
+#### Workflow dijalankan dengan:
 - Manual Trigger
 - Pull Request
+#### Workflow Result
+<img width="317" height="72" alt="final result" src="https://github.com/user-attachments/assets/5d077860-9b28-46fc-8bab-e86c1a5daae7" />
+
