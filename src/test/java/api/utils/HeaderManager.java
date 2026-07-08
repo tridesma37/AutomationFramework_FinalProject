@@ -13,7 +13,5 @@ public class HeaderManager {
                 .header("app-id","63a804408eb0cb069b57e43a")
 
                 .header("Content-Type","application/json");
-
     }
-
 }

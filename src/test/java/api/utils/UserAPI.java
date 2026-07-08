@@ -4,62 +4,48 @@ import io.restassured.response.Response;
 
 public class UserAPI {
 
-    public Response getUser(){
-
+    public Response getUser(String id){
         return HeaderManager.request()
-
-                .get("https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca");
-
+                .get("https://dummyapi.io/data/v1/user/" + id);
     }
 
     public Response getTags(){
-
         return HeaderManager.request()
-
                 .get("https://dummyapi.io/data/v1/tag");
 
     }
 
     public Response createUser(){
-
+        String email = "tridesma" + System.currentTimeMillis() + "@gmail.com";
         String body = """
-                {
-                    "firstName":"Tridesma",
-                    "lastName":"Essurgani",
-                    "email":"tridesma.essurgani@gmail.com"
-                }
-                """;
-
+            {
+                "title":"mr",
+                "firstName":"Tridesma",
+                "lastName":"Essurgani",
+                "email":"%s"
+            }
+            """.formatted(email);
         return HeaderManager.request()
-
                 .body(body)
-
                 .post("https://dummyapi.io/data/v1/user/create");
 
     }
 
-    public Response updateUser(){
+    public Response updateUser(String id){
 
         String body = """
-                {
-                    "firstName":"Lucky Update"
-                }
-                """;
+            {
+                "firstName":"Tridesma Updated"
+            }
+            """;
 
         return HeaderManager.request()
-
                 .body(body)
-
-                .put("https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca");
-
+                .put("https://dummyapi.io/data/v1/user/" + id);
     }
 
-    public Response deleteUser(){
-
+    public Response deleteUser(String id){
         return HeaderManager.request()
-
-                .delete("https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca");
-
+                .delete("https://dummyapi.io/data/v1/user/" + id);
     }
-
 }
