@@ -17,21 +17,6 @@ Automation Test Framework menggunakan **Java**, **Selenium WebDriver**, **Rest A
 ---
 
 # Project Structure
-```text
-src
-│
-├── test
-│   ├── java
-│   │
-│   ├── api
-│   │
-│   ├── web
-│   │
-│   └── hooks
-│
-└── resources
-    └── features
-```
 
 ---
 
