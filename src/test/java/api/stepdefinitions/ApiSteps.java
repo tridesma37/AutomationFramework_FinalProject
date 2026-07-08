@@ -27,6 +27,9 @@ public class ApiSteps {
     @Then("Status code API harus 200")
     public void status_code_api_harus_200() {
 
+        System.out.println("Status Code : " + response.getStatusCode());
+        response.prettyPrint();
+
         Assert.assertEquals(200, response.getStatusCode());
 
     }
@@ -45,6 +48,9 @@ public class ApiSteps {
 
     @Then("User berhasil dibuat")
     public void user_berhasil_dibuat() {
+
+        System.out.println("Status Code : " + response.getStatusCode());
+        response.prettyPrint();
 
         Assert.assertEquals(200, response.getStatusCode());
 
@@ -65,6 +71,9 @@ public class ApiSteps {
     @Then("User berhasil diupdate")
     public void user_berhasil_diupdate() {
 
+        System.out.println("Status Code : " + response.getStatusCode());
+        response.prettyPrint();
+
         Assert.assertEquals(200, response.getStatusCode());
 
     }
@@ -83,6 +92,9 @@ public class ApiSteps {
 
     @Then("User berhasil dihapus")
     public void user_berhasil_dihapus() {
+
+        System.out.println("Status Code : " + response.getStatusCode());
+        response.prettyPrint();
 
         Assert.assertEquals(200, response.getStatusCode());
 

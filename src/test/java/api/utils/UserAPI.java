@@ -24,9 +24,9 @@ public class UserAPI {
 
         String body = """
                 {
-                    "firstName":"Lucky",
-                    "lastName":"Belle",
-                    "email":"luckybelle@example.com"
+                    "firstName":"Tridesma",
+                    "lastName":"Essurgani",
+                    "email":"tridesma.essurgani@gmail.com"
                 }
                 """;
 

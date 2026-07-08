@@ -12,23 +12,31 @@ repositories {
 dependencies {
     // Selenium
     implementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+
     // WebDriverManager
     implementation 'io.github.bonigarcia:webdrivermanager:6.2.0'
+
     // Rest Assured
     testImplementation 'io.rest-assured:rest-assured:5.5.6'
+
     // Cucumber
     testImplementation 'io.cucumber:cucumber-java:7.23.0'
     testImplementation 'io.cucumber:cucumber-junit:7.23.0'
-    // JUnit 4
+
+    // JUnit
     testImplementation 'junit:junit:4.13.2'
-    // JSON
+
+    // Gson
     implementation 'com.google.code.gson:gson:2.13.1'
 }
 
-tasks.withType(Test).configureEach {
+test {
+    useJUnit()
+
     systemProperty "cucumber.publish.quiet", "true"
 }
-task runWeb(type: Test) {
+
+tasks.register("runWeb", Test) {
     useJUnit()
 
     systemProperty "cucumber.filter.tags", "@web"
@@ -36,7 +44,7 @@ task runWeb(type: Test) {
     include "**/WebRunner.class"
 }
 
-task runApi(type: Test) {
+tasks.register("runApi", Test) {
     useJUnit()
 
     systemProperty "cucumber.filter.tags", "@api"

@@ -7,13 +7,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   automation-test:
 
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -22,9 +24,13 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
+          cache: gradle
 
-      - name: Grant execute permission
+      - name: Grant Execute Permission
         run: chmod +x gradlew
+
+      - name: Build Project
+        run: ./gradlew build -x test
 
       - name: Execute Web Test
         run: ./gradlew runWeb
@@ -37,4 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-report
-          path: reports/
+          path: |
+            reports/
+            build/reports/
