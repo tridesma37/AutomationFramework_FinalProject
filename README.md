@@ -34,6 +34,7 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 ### Scenario:
 - Login Success ✅
 - Login Failed ✅
+- End-to-End Checkout ✅
 
 ---
 
@@ -45,6 +46,7 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 - Update User ✅
 - Delete User ✅
 - Get Tag ✅
+- Get User dengan Invalid ID (Negative Test) ✅
 
 ---
 
@@ -76,8 +78,10 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 
 ## GitHub Actions
 #### Workflow dijalankan dengan:
-- Manual Trigger
+- Push
 - Pull Request
+- Manual Trigger
 #### Workflow Result
-<img width="317" height="72" alt="final result" src="https://github.com/user-attachments/assets/5d077860-9b28-46fc-8bab-e86c1a5daae7" />
+<img width="639" height="73" alt="final result" src="https://github.com/user-attachments/assets/492bed1d-707d-4b60-a543-7cfa9473672a" />
+
 
