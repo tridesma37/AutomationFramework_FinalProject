@@ -48,4 +48,9 @@ public class UserAPI {
         return HeaderManager.request()
                 .delete("https://dummyapi.io/data/v1/user/" + id);
     }
+
+    public Response getInvalidUser() {
+        return HeaderManager.request()
+                .get("https://dummyapi.io/data/v1/user/507f1f77bcf86cd799439011");
+    }
 }

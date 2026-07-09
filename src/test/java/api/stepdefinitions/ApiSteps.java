@@ -100,4 +100,20 @@ public class ApiSteps {
     public void tag_berhasil_ditampilkan() {
         Assert.assertEquals(200, response.getStatusCode());
     }
+
+    @Given("User memiliki endpoint Invalid User")
+    public void user_memiliki_endpoint_invalid_user() {
+    }
+
+    @When("User mengirim request GET Invalid User")
+    public void user_mengirim_request_get_invalid_user() {
+        response = userAPI.getInvalidUser();
+    }
+
+    @Then("Status code API harus 404")
+    public void status_code_api_harus_404() {
+        System.out.println("Status Code = " + response.getStatusCode());
+        response.prettyPrint();
+        Assert.assertEquals(404, response.getStatusCode());
+    }
 }

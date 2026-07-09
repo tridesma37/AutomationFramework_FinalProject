@@ -29,3 +29,9 @@ Feature: Dummy API User
     Given User memiliki endpoint Tag
     When User mengirim request GET Tag
     Then Tag berhasil ditampilkan
+
+  @api
+  Scenario: Get User dengan ID tidak valid
+    Given User memiliki endpoint Invalid User
+    When User mengirim request GET Invalid User
+    Then Status code API harus 404
