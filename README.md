@@ -34,7 +34,9 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 ### Scenario:
 - Login Success ✅
 - Login Failed ✅
+- Remove Product from Cart ✅
 - End-to-End Checkout ✅
+- Logout ✅
 
 ---
 
