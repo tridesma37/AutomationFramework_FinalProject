@@ -33,7 +33,7 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 **Target Website:** https://www.saucedemo.com/
 ### Scenario:
 - Login Success ✅
-- Login Failed ✅
+- Login Failed (Negative Test) ✅
 - Remove Product from Cart ✅
 - End-to-End Checkout ✅
 - Logout ✅
