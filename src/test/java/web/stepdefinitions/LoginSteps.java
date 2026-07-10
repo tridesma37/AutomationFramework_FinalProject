@@ -28,6 +28,26 @@ public class LoginSteps {
         loginPage.openCart();
     }
 
+    @And("User menghapus produk dari cart")
+    public void removeProduct() {
+        loginPage.removeProduct();
+    }
+
+    @Then("Cart menjadi kosong")
+    public void cartEmpty() {
+        Assert.assertTrue(loginPage.isCartEmpty());
+    }
+
+    @And("User logout")
+    public void logout() {
+        loginPage.logout();
+    }
+
+    @Then("User kembali ke halaman login")
+    public void backToLogin() {
+        Assert.assertTrue(loginPage.isLoginPageDisplayed());
+    }
+
     @And("User checkout dengan data")
     public void checkout() {
         loginPage.checkout(
