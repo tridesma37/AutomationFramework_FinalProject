@@ -84,6 +84,7 @@ Automation Test Framework menggunakan **Java, Selenium WebDriver, Rest Assured, 
 - Pull Request
 - Manual Trigger
 #### Workflow Result
-<img width="639" height="73" alt="final result" src="https://github.com/user-attachments/assets/492bed1d-707d-4b60-a543-7cfa9473672a" />
+<img width="318" height="119" alt="final result" src="https://github.com/user-attachments/assets/fc533b10-842e-4d9d-9681-95e7f09d29d2" />
+
 
 
